@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="10dp"
+              android:background="@drawable/splitcolour_rectangle"
+            android:layout_margin="10dp">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/whiteLayout"
+            android:layout_margin="10dp">
+        <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleLayout"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="20dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewTitle"
+                    android:text="Title"
+                    android:layout_toLeftOf="@+id/button_updateToDo"
+                    android:layout_alignParentLeft="true"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="20dp" android:textStyle="bold"/>
+            <ImageButton
+                    android:id="@+id/button_updateToDo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:src= "@drawable/ic_more"
+                    android:background="@color/colorWhite"
+            />
+        </RelativeLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/layoutTimeText"
+                android:weightSum="3"
+                android:layout_below="@+id/titleLayout"
+                android:layout_marginBottom="10dp">
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layoutStartTime"
+                    android:layout_weight="1">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Start Date"
+                        android:id="@+id/textViewStartDateText"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewDateStartInfo"
+                        android:text="start date"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:layout_below="@+id/textViewStartDateText"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layoutEndTime"
+                    android:layout_weight="1">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="End Date"
+                        android:id="@+id/textViewEndDateText"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewDateEndInfo"
+                        android:text="end date"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:layout_below="@id/textViewEndDateText"/>
+            </RelativeLayout>
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layoutTimeLeft"
+                    android:layout_weight="1">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Time Left"
+                        android:id="@+id/textViewTimeLeftText"
+                />
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewTimeLeftInfo"
+                        android:text="time left"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:layout_below="@id/textViewTimeLeftText"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/layoutStatusInfo"
+            android:background="@color/colorGrey"
+            android:weightSum="3"
+            android:layout_below="@id/whiteLayout"
+            android:layout_marginStart="10dp">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewStatusText"
+                android:text="Status"
+                android:layout_weight="1"
+
+        />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewStatusInfo"
+                android:text="status"
+                android:layout_weight="1"
+                android:textColor="@color/colorBlack"
+
+                android:textStyle="bold"/>
+        <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/checkBoxComplete"
+                android:text="Tick if completed"
+                android:layout_weight="1"
+
+        />
+
+    </LinearLayout>
+
+</RelativeLayout>
